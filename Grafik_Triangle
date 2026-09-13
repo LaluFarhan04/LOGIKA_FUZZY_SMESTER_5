@@ -1,0 +1,175 @@
+1. bayi usia dini 0-5 tahun 
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 5, 500)
+
+a = 0
+b = 2.5
+c = 5
+
+y = np.zeros_like(x)
+
+y[(x > a) & (x <= b)] = (x[(x > a) & (x <= b)] - a) / (b - a)
+y[(x > b) & (x < c)] = (c - x[(x > b) & (x < c)]) / (c - b)
+y[x == b] = 1
+
+plt.plot(x, y)
+
+plt.title("Fungsi Keanggotaan Bayi / Anak Usia Dini")
+plt.xlabel("Usia (tahun)")
+plt.ylabel("Derajat Keanggotaan")
+plt.grid(True)
+plt.ylim(0, 1.1)
+
+plt.show()
+
+2.anak-anak usia 6-11 tahun
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(6, 11, 500)
+
+a = 6
+b = 8.5
+c = 11
+
+y = np.zeros_like(x)
+
+y[(x > a) & (x <= b)] = (x[(x > a) & (x <= b)] - a) / (b - a)
+y[(x > b) & (x < c)] = (c - x[(x > b) & (x < c)]) / (c - b)
+y[x == b] = 1
+
+plt.plot(x, y)
+
+plt.title("Fungsi Keanggotaan Anak-anak")
+plt.xlabel("Usia (tahun)")
+plt.ylabel("Derajat Keanggotaan")
+plt.grid(True)
+plt.ylim(0, 1.1)
+
+plt.show()
+
+3. remaja usia 10-19 tahun
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(10, 19, 500)
+
+a = 10
+b = 14.5
+c = 19
+
+y = np.zeros_like(x)
+
+y[(x > a) & (x <= b)] = (x[(x > a) & (x <= b)] - a) / (b - a)
+y[(x > b) & (x < c)] = (c - x[(x > b) & (x < c)]) / (c - b)
+y[x == b] = 1
+
+plt.plot(x, y)
+
+plt.title("Fungsi Keanggotaan Remaja")
+plt.xlabel("Usia (tahun)")
+plt.ylabel("Derajat Keanggotaan")
+plt.grid(True)
+plt.ylim(0, 1.1)
+
+plt.show()
+
+4.pemuda 15-24 tahun
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(15, 24, 500)
+
+a = 15
+b = 19.5
+c = 24
+
+y = np.zeros_like(x)
+
+y[(x > a) & (x <= b)] = (x[(x > a) & (x <= b)] - a) / (b - a)
+y[(x > b) & (x < c)] = (c - x[(x > b) & (x < c)]) / (c - b)
+y[x == b] = 1
+
+plt.plot(x, y)
+
+plt.title("Fungsi Keanggotaan Pemuda")
+plt.xlabel("Usia (tahun)")
+plt.ylabel("Derajat Keanggotaan")
+plt.grid(True)
+plt.ylim(0, 1.1)
+
+plt.show()
+
+5.Dewasa 20-65 tahun
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Rentang usia
+x = np.linspace(20, 65, 500)
+
+# Titik fungsi segitiga
+a = 20
+b = 42.5
+c = 65
+
+# Membuat nilai awal derajat keanggotaan
+y = np.zeros_like(x)
+
+# Sisi naik
+kiri = (x > a) & (x <= b)
+y[kiri] = (x[kiri] - a) / (b - a)
+
+# Sisi turun
+kanan = (x > b) & (x < c)
+y[kanan] = (c - x[kanan]) / (c - b)
+
+# Titik puncak
+y[x == b] = 1
+
+# Membuat grafik
+plt.figure(figsize=(8, 5))
+
+plt.plot(x, y, linewidth=2)
+
+# Judul dan label
+plt.title("Fungsi Keanggotaan Dewasa")
+plt.xlabel("Usia (tahun)")
+plt.ylabel("Derajat Keanggotaan μ(x)")
+
+# Batas grafik
+plt.xlim(20, 65)
+plt.ylim(0, 1.1)
+
+# Grid
+plt.grid(True)
+
+# Menampilkan grafik
+plt.show()
+
+6. Lansia 60-80 tahun
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(60, 80, 500)
+
+a = 60
+b = 70
+c = 80
+
+y = np.zeros_like(x)
+
+y[(x > a) & (x <= b)] = (x[(x > a) & (x <= b)] - a) / (b - a)
+y[(x > b) & (x < c)] = (c - x[(x > b) & (x < c)]) / (c - b)
+y[x == b] = 1
+
+plt.plot(x, y)
+
+plt.title("Fungsi Keanggotaan Lanjut Usia / Lansia")
+plt.xlabel("Usia (tahun)")
+plt.ylabel("Derajat Keanggotaan")
+plt.grid(True)
+plt.ylim(0, 1.1)
+
+plt.show()
